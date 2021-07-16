@@ -1,0 +1,134 @@
+//HEADER NAVIGATION
+.header {
+    border-bottom: 1px solid #ececec;
+
+    .container {
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__main-nav {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        @include flex-center(space-between, center);
+
+        @media screen and (min-width: 768px) {
+            padding: 0;
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__nav-item + &__nav-item {
+        margin-left: 50px;
+    }
+
+    &__menu-button {
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__nav-link {
+        position: relative;
+        display: block;
+        padding-top: 33px;
+        padding-bottom: 32px;
+        font-weight: 500;
+        color: $primary-text-color;
+
+        &:hover,
+        &:focus {
+            @include color-transitions($accent-color);
+        }
+
+        &:after {
+            @extend %after-link;
+        }
+
+        &:hover:after {
+            transform: scale(1);
+        }
+    }
+
+    &--current {
+        &:after {
+            @extend %after-link;
+            transform: scale(1);
+        }
+    }
+}
+
+/*HEADER CONTACT*/
+.header {
+    &__contact {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: auto;
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__email-icon {
+        .header__contact-link:hover & {
+            @include fill-transitions($accent-color);
+        }
+    }
+
+    &__tel-icon {
+        .header__contact-link:hover & {
+            @include fill-transitions($accent-color);
+        }
+    }
+
+    &__contact-item:not(:first-child) {
+        margin-top: 10px;
+        @media screen and (min-width: 1200px) {
+            margin-left: 50px;
+            margin-top: 0;
+        }
+    }
+
+    &__contact-link {
+        display: inline-flex;
+        align-items: center;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        color: $text-color;
+
+        &:hover,
+        &focus {
+            @include color-transitions($accent-color);
+        }
+    }
+
+    &__tel-icon,
+    &__email-icon {
+        margin-right: 10px;
+        fill: $text-color;
+    }
+}
+
+.our-teem__box {
+    &:hover {
+        .our-teem__icon {
+            fill: #fff;
+        }
+    }
+}

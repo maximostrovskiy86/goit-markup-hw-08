@@ -1,0 +1,9 @@
+@mixin color-transitions($color) {
+    color: $color;
+    transition: color 250ms $timing-function;
+}
+
+@mixin fill-transitions($color) {
+    fill: $color;
+    transition: color 250ms $timing-function;
+}

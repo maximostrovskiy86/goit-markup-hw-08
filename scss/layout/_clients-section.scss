@@ -1,0 +1,36 @@
+.client {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+    &__item {
+        display: inline-flex;
+        flex-basis: calc((100% - 2 * 30px) / 2);
+        margin-left: 30px;
+        margin-top: 30px;
+        height: 92px;
+        fill: $svg-color;
+        border: 1px solid #afb1b8;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: fill 250ms $timing-function;
+        &:hover,
+        &:focus {
+            border-color: $accent-color;
+            fill: $accent-color;
+        }
+
+        @media screen and (min-width: 768px) {
+            // flex-basis: calc((100% - кол-во маржинов в строке * значение маржина) / кол-во элементов в строке);
+            flex-basis: calc((100% - 3 * 30px) / 3);
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 6 * 30px) / 6);
+        }
+    }
+
+    &__icon {
+        margin: auto;
+    }
+}

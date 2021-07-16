@@ -1,0 +1,17 @@
+@import "./base/modern-normalize";
+@import "./base/reset";
+@import "./utils/variables";
+@import "./utils/placeholder";
+@import "./utils/partial";
+@import "./utils/mixin";
+
+@import "./components/header";
+@import "./components/banner-section";
+@import "./components/benefits-section";
+@import "./components/doing-section";
+@import "./components/team-section";
+@import "./components/clients-section";
+@import "./components/footer";
+@import "./components/modal";
+
+@import "./components/portfolio-page";
