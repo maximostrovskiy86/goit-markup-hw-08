@@ -625,7 +625,7 @@ h2 {
 }
 
 .header__menu-button {
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -679,6 +679,12 @@ h2 {
   color: #2196F3;
 }
 
+@media screen and (max-width: 375px) {
+  .mobile-menu--number-blue {
+    font-size: 28px;
+  }
+}
+
 .mobile-menu__social {
   margin-top: 64px;
   display: flex;
@@ -698,6 +704,12 @@ h2 {
   font-size: 18px;
   line-height: 1.22;
   color: #2196F3;
+}
+
+@media screen and (max-width: 375px) {
+  .mobile-menu__social .mobile-menu__social-link {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -842,13 +854,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1600px;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
   background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner-480.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -878,6 +889,36 @@ body {
     font-size: 44px;
     line-height: 1.41;
     letter-spacing: 0.03em;
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .banner {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner2@-480.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner-768.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .banner {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner2@-768.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner-1200.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .banner {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner2@-1200.jpg");
   }
 }
 
@@ -1350,6 +1391,9 @@ body {
 }
 
 .works__item {
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1388,9 +1432,6 @@ body {
 
 .works__card-item {
   padding: 20px 24px;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  border-left: 1px solid #eee;
 }
 
 .works__title {
@@ -1426,7 +1467,7 @@ body {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   color: #fff;
-  transform: translatey(100%);
+  transform: translatey(101%);
   z-index: 100;
 }
 

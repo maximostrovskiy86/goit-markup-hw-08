@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1600px;
+    // max-width: 1600px;
     margin: 0 auto;
     padding-top: 118px;
     padding-bottom: 118px;
     text-align: center;
     background-color: #2f303a;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url('../images/banner.jpg');
+        url('../images/banner-480.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -34,6 +34,49 @@
             font-size: 44px;
             line-height: 1.41;
             letter-spacing: 0.03em;
+        }
+    }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .banner {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../images/banner2@-480.jpg');
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../images/banner-768.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .banner {
+            background-image: linear-gradient(
+                    to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url('../images/banner2@-768.jpg');
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .banner {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../images/banner-1200.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .banner {
+            background-image: linear-gradient(
+                    to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url('../images/banner2@-1200.jpg');
         }
     }
 }

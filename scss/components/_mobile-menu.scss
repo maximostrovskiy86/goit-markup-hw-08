@@ -22,7 +22,7 @@
 }
 
 .header__menu-button {
-    background-color: $white-color;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     transition: fill 250ms $timing-function;
@@ -78,6 +78,10 @@
     font-size: 34px;
     line-height: 1.8;
     color: $accent-color;
+
+    @media screen and (max-width: 375px) {
+        font-size: 28px;
+    }
 }
 
 .mobile-menu__social {
@@ -99,5 +103,8 @@
         font-size: 18px;
         line-height: 1.22;
         color: $accent-color;
+        @media screen and (max-width: 375px) {
+            font-size: 14px;
+        }
     }
 }

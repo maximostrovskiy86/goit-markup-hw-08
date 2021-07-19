@@ -59,6 +59,9 @@
     }
 
     &__item {
+        border-right: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        border-left: 1px solid #eee;
         transition: box-shadow 250ms $timing-function;
 
         &:hover,
@@ -95,9 +98,6 @@
 
     &__card-item {
         padding: 20px 24px;
-        border-right: 1px solid #eee;
-        border-bottom: 1px solid #eee;
-        border-left: 1px solid #eee;
     }
 
     &__title {
@@ -134,7 +134,7 @@
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
     color: $white-color;
-    transform: translatey(100%);
+    transform: translatey(101%);
     z-index: 100;
 
     .works__item:hover & {
